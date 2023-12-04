@@ -3,25 +3,79 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground-rgb: 30, 30, 30; /* Blackish */
+  --background-rgb: 249, 244, 237; /* Egg */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+@font-face {
+  font-family: Montserrat-Italic;
+  src: url("../fonts/Montserrat-Italic.ttf");
+}
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("../fonts/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: Montserrat-MediumItalic;
+  src: url("../fonts/Montserrat-MediumItalic.ttf");
+}
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: Montserrat-SemiBold;
+  src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: Montserrat-SemiBoldItalic;
+  src: url("../fonts/Montserrat-SemiBoldItalic.ttf");
+}
+
+.font-m-italic {
+  font-family: Montserrat-Italic;
+}
+.font-m-medium {
+  font-weight: 500;
+  font-family: Montserrat-Medium;
+}
+.font-m-mediumItalic {
+  font-family: Montserrat-MediumItalic;
+}
+.font-m-regular {
+  font-weight: 400;
+  font-family: Montserrat-Regular;
+}
+.font-m-semiBold {
+  font-weight: 600;
+  font-family: Montserrat-SemiBold;
+}
+.font-m-semiBoldItalic {
+  font-family: Montserrat-SemiBoldItalic;
+}
+.bg-blob-green-light {
+  position: relative;
+  overflow: hidden;
+}
+/* https://www.sitepoint.com/css3-transform-background-image/ */
+
+.bg-blob-green-light::before {
+  transform: rotate(-140deg);
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  z-index: -1;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../public/imgs/blob_green.png");
+  background-repeat: no-repeat;
 }
