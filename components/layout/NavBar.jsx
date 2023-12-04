@@ -26,7 +26,7 @@ const NavBar = () => {
               alt='Walk With Impact logo'
               fill
               className='ml-6'
-              src='/imgs/wwi_logo_trans_text_col.png  '
+              src='/imgs/wwi_logo_trans_text_col.png'
             />
           </div>
         </div>
