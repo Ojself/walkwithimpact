@@ -18,6 +18,7 @@ const NavBar = () => {
             <Image
               alt='Walk With Impact logo'
               fill
+              objectFit='contain'
               src='/imgs/wwi_logo_green.png'
             />
           </div>
@@ -25,6 +26,7 @@ const NavBar = () => {
             <Image
               alt='Walk With Impact logo'
               fill
+              objectFit='contain'
               className='ml-6'
               src='/imgs/wwi_logo_trans_text_col.png'
             />
@@ -33,17 +35,21 @@ const NavBar = () => {
       </Link>
       <div className='w-full justify-around flex items-center'>
         {navs.map((nav) => {
-          const formattedNav = nav.toLowerCase().replace(" ", "-");
-          console.log(pathname);
+          // should remove æ ø å
+
+          const formattedNav = nav
+            .toLowerCase()
+            .replace(" ", "-")
+            .replaceAll("æ", "ae")
+            .replaceAll("ø", "o")
+            .replaceAll("å", "a");
           const isActive = pathname === `/${formattedNav}`;
           return (
             <Link
               key={nav}
               href={`/${formattedNav}`}
               className={`
-                ${
-                  !isActive ? "underline" : ""
-                } " underline-offset-8 uppercase  "
+                ${isActive ? "underline" : ""} " underline-offset-8 uppercase  "
               `}
             >
               {nav}
