@@ -1,7 +1,15 @@
 import React from "react";
 
-const SmallText = ({ text }) => {
-  return <p className={`text-sm`}>{text}</p>;
+const Paragraph = ({ text, italic, className }) => {
+  return (
+    <p
+      className={`${className} text-base font-m-${
+        italic ? "italic" : "regular"
+      }`}
+    >
+      {text}
+    </p>
+  );
 };
 
-export default SubParagraph;
+export default Paragraph;
