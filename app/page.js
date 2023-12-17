@@ -1,4 +1,5 @@
 import Gallery from "@/components/home/Gallery";
+import SectionDefaultLayout from "@/components/layout/SectionDefaultLayout";
 import Heading1 from "@/components/layout/typography/Heading1";
 import Heading3 from "@/components/layout/typography/Heading3";
 import Paragraph from "@/components/layout/typography/Paragraph";
@@ -7,28 +8,35 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className='flex flex-col'>
-      <section className='px-20 mt-20'>
-        <Image
-          width={961}
-          height={641}
-          src='/imgs/models_tee.png'
-          alt='Models with white tee shirts'
-        />
+      <SectionDefaultLayout>
+        <div>
+          <div>
+            <Image
+              width={961}
+              height={641}
+              src='/imgs/models_tee.png'
+              alt='Models with white tee shirts'
+            />
+          </div>
 
-        <div className='flex flex-col'>
-          <Heading1
-            className='uppercase mt-4'
-            text='Walk with impact - vinter kolleksjon'
-          />
-          <div className='flex justify-end'>
-            <Paragraph text='Streetwear -' />
-            <Paragraph className='ml-1' italic={true} text='med en intensjon' />
+          <div className='flex flex-col'>
+            <Heading1
+              className='uppercase mt-4'
+              text='Walk with impact - vinter kolleksjon'
+            />
+            <div className='flex justify-end'>
+              <Paragraph text='Streetwear -' />
+              <Paragraph
+                className='ml-1'
+                italic={true}
+                text='med en intensjon'
+              />
+            </div>
           </div>
         </div>
-      </section>
+      </SectionDefaultLayout>
       <Gallery />
-
-      <section className='bg-blob-green-light h-screen  flex items-center justify-center'>
+      <SectionDefaultLayout className='bg-blob-green-light h-screen  flex items-center justify-center'>
         <div className='flex justify-between w-full md:w-2/3 lg:w-1/2'>
           <div className='w-full md:w-2/5'>
             <p className='mb-12'>
@@ -84,7 +92,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </SectionDefaultLayout>
     </main>
   );
 }

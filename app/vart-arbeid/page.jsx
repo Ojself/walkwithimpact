@@ -15,6 +15,7 @@ import {
 } from "react-accessible-accordion";
 import "react-accessible-accordion/dist/fancy-example.css";
 import SubParagraph from "@/components/layout/typography/SmallText";
+import Heading5 from "@/components/layout/typography/Heading5";
 
 const faqs = [
   {
@@ -168,16 +169,17 @@ const VartArbeid = () => {
         <Heading2 text='Team' />
         <div className='grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 '>
           {images.map((image) => (
-            <div
-              key={image.src}
-              className='relative overflow-hidden aspect-ratio-square pb-80 '
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                fill
-                className='inset-0 object-contain object-left'
-              />
+            <div key={image.src}>
+              <div className='relative overflow-hidden aspect-ratio-square pb-80 '>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  className='inset-0 object-contain object-left'
+                />
+              </div>
+              <Heading5 className='uppercase' text='Tormod' />
+              <ParagraphBold text='Technical lead' />
             </div>
           ))}
         </div>
@@ -205,7 +207,7 @@ const VartArbeid = () => {
           </Accordion>
         </div>
       </section>
-      <div className='flex flex-col fixed left-4 top-40'>
+      <div className='hidden md:flex flex-col fixed left-4 top-40'>
         <button
           className='flex'
           onClick={() => {

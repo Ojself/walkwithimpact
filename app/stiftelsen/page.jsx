@@ -1,3 +1,4 @@
+import SectionDefaultLayout from "@/components/layout/SectionDefaultLayout";
 import Heading1 from "@/components/layout/typography/Heading1";
 import Heading2 from "@/components/layout/typography/Heading2";
 import Heading3 from "@/components/layout/typography/Heading3";
@@ -16,15 +17,15 @@ const Stiftelsen = () => {
           src='/imgs/tees_hero.jpeg'
         />
       </section>
-      <section className='flex justify-center items-center h-[340px]'>
+      <SectionDefaultLayout>
         <div className='text-center w-full sm:w-3/4 md:w-1/2'>
           <Heading1 className='uppercase mb-6' text='Stiftelsen' />
           <Paragraph text='Stiftelsen bistår unge mennesker med tilbakefall fra tradisjonell terapi - med bl.a økonomisk støtte inn mot forebyggende og litt annerledes behandlingsformer.  ' />
         </div>
-      </section>
-      <section className='flex justify-center '>
+      </SectionDefaultLayout>
+      <SectionDefaultLayout>
         <div className='flex items-center justify-between'>
-          <div className='w-2/5 flex flex-col'>
+          <div className='w-5/12 md:w-2/5 flex flex-col'>
             <Heading2
               className='uppercase mb-20'
               text='Vår felles utfordring?'
@@ -42,32 +43,36 @@ const Stiftelsen = () => {
               text='Depresjon kommer tilbake hos omtrent en tredjedel av pasientene innen 1 år etter avsluttet behandling'
             />
           </div>
-          <div className='relative w-2/5 h-[800px]'>
+          <div className='relative w-5/12 md:w-2/5 h-[800px] '>
             <Image
               alt='Tee shirt blue'
               fill
               objectFit='contain'
+              className='object-top'
               src='/imgs/model_back_left_tee_blue.png'
             />
           </div>
         </div>
-      </section>
-      <section className='flex justify-center border-green-500 border-2'>
-        <div className='flex items-center justify-between border-red-500 border-2'>
+      </SectionDefaultLayout>
+      <SectionDefaultLayout>
+        <div className='flex items-center justify-between w-full'>
           <div className='flex flex-col w-2/5'>
-            <Heading3 text='Trenger noe info her om hva dette er. Er dette løsningen?:' />
-            <Heading3 text='-kan søke støtte til : ' />
+            <Heading3
+              className='uppercase mb-10'
+              text='Trenger noe info her om hva dette er. Er dette løsningen?:'
+            />
+            <Heading3 className='uppercase' text='- Kan søke støtte til : ' />
           </div>
           <div className='flex flex-col w-2/5'>
-            <Heading3 className='uppercase' text='Traumekunst' />
-            <Heading3 className='uppercase' text='Personlig trener' />
-            <Heading3 className='uppercase' text='Somatisk terapi' />
-            <Heading3 className='uppercase' text='Selvhjelpspakker' />
-            <Heading3 className='uppercase' text='Coaching' />
-            <Heading3 className='uppercase' text='Danseterapi' />
+            <Heading3 className='uppercase mb-10' text='Traumekunst' />
+            <Heading3 className='uppercase mb-10' text='Personlig trener' />
+            <Heading3 className='uppercase mb-10' text='Somatisk terapi' />
+            <Heading3 className='uppercase mb-10' text='Selvhjelpspakker' />
+            <Heading3 className='uppercase mb-10' text='Coaching' />
+            <Heading3 className='uppercase mb-10' text='Danseterapi' />
           </div>
         </div>
-      </section>
+      </SectionDefaultLayout>
       <section className='flex justify-center items-center bg-impact-green h-[530px]'>
         <div className='flex flex-col items-center text-impact-white'>
           <Heading2 className='uppercase mb-6' text='Bli med på pilot' />
