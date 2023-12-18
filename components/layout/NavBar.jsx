@@ -12,27 +12,26 @@ const NavBar = () => {
 
   return (
     <nav className='flex p-8'>
-      <Link href='/'>
-        <div className='flex h-[70px] h- w-[170px]'>
+      <div className='flex h-[70px] w-[170px]'>
+        <Link className='w-full flex ' href='/'>
           <div className='w-1/2 relative'>
             <Image
               alt='Walk With Impact logo'
-              fill
               objectFit='contain'
               src='/imgs/wwi_logo_green.png'
+              fill
             />
           </div>
-          <div className='w-1/2 relative'>
+          <div className='ml-6 w-1/2 relative'>
             <Image
               alt='Walk With Impact logo'
               fill
               objectFit='contain'
-              className='ml-6'
               src='/imgs/wwi_logo_trans_text_col.png'
             />
           </div>
-        </div>
-      </Link>
+        </Link>
+      </div>
       <div className='w-full justify-around flex items-center'>
         {navs.map((nav) => {
           // should remove æ ø å
@@ -49,7 +48,9 @@ const NavBar = () => {
               key={nav}
               href={`/${formattedNav}`}
               className={`
-                ${isActive ? "underline" : ""} " underline-offset-8 uppercase  "
+                ${
+                  isActive ? "underline" : ""
+                } " underline-offset-8 uppercase text-xs sm:text-sm md:text-base "
               `}
             >
               {nav}

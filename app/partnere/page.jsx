@@ -10,7 +10,7 @@ const Page = () => {
   return (
     <main>
       <SectionDefaultLayout>
-        <div className='h-[564px] flex flex-col justify-center items-center text-center'>
+        <div className='h-[564px] w-full sm:w-3/4 md:w-2/3  flex flex-col justify-center items-center text-center'>
           <Heading1 className='uppercase mb-16' text='Partnere' />
           <Paragraph text='Vi er superduper stolte av å kunne jobbe med noen fantastiske produsenter som deler vår visjon for etisk og bærekraftig produksjon.' />
         </div>

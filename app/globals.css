@@ -61,18 +61,37 @@ body {
 .font-m-semiBoldItalic {
   font-family: Montserrat-SemiBoldItalic;
 }
-.bg-blob-green-light {
+.bg-blob-green-light2 {
   position: relative;
   overflow: hidden;
 }
 /* https://www.sitepoint.com/css3-transform-background-image/ */
 
-.bg-blob-green-light::before {
+.bg-blob-green-light2::before {
   transform: rotate(-140deg);
   content: "";
   position: absolute;
   width: 120%;
   height: 120%;
+  z-index: -1;
+  background-position: center;
+  background-size: contain;
+  background-image: url("../public/imgs/blob_green.png");
+  background-repeat: no-repeat;
+}
+
+.bg-blob-green-light {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-blob-green-light::before {
+  transform: rotate(-140deg);
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+
   z-index: -1;
   background-position: center;
   background-size: contain;

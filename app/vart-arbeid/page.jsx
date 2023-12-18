@@ -16,6 +16,7 @@ import {
 import "react-accessible-accordion/dist/fancy-example.css";
 import SubParagraph from "@/components/layout/typography/SmallText";
 import Heading5 from "@/components/layout/typography/Heading5";
+import Heading1 from "@/components/layout/typography/Heading1";
 
 const faqs = [
   {
@@ -84,89 +85,111 @@ const VartArbeid = () => {
   };
   return (
     <main className='flex flex-col items-end '>
-      <section
-        ref={visjonRef}
-        className='w-full md:w-2/3 py-20 md:py-28  h-[650px]'
-      >
+      <section ref={visjonRef} className='w-full md:w-2/3 px-2 h-[650px]'>
         <div className='w-full relative h-full'>
           <Image
             alt='Tee shirts logo'
             fill
-            objectFit='contain'
+            objectFit='cover'
             src='/imgs/clothing_hero.jpeg'
           />
         </div>
       </section>
-      {/* <section className='w-full md:w-2/3 py-20 md:py-28 '>
-        <div className='h-20'>
-          <Image
-            alt='Tee shirts logo'
-            fill
-            objectFit='contain'
-            src='/imgs/model_back_tee_white.png'
+      <section ref={visjonRef} className='w-full md:w-2/3 py-20 md:py-28 px-2'>
+        <Heading1 className='uppercase text-center mt-10' text='Vårt arbeid' />
+      </section>
+      <section className='bg-blob-green-light min-h-screen w-full md:w-2/3 flex items-center justify-center px-2'>
+        <div className='flex flex-col w w-4/5 md:w-2/3 lg:w-1/2'>
+          <Heading2 className='uppercase mb-3' text='Vår visjon' />
+          <Paragraph
+            className='mb-6'
+            text='Vi har flere personlige grunner for opprettelsen av WalkWithImpact AS og WalkWithImpact Stiftelsen.'
+          />
+          <Paragraph
+            className='mb-6'
+            text='Første - er å bidra positiv på en medmenneskelig samfunnsutfordring - som flere av oss har en personlig relasjon til. Enten direkte eller indirekte. '
+          />
+          <Paragraph
+            className='mb-6'
+            text='Andre - er å kunne bidra positivt ved å skape våre egne funds, uten å måtte be om donasjoner fra andre.'
+          />
+          <Paragraph
+            className='mb-6'
+            text='Tredje - er å kunne vise transparent forvaltning av “raised funds” for å redusere “overhead” og effektivisere “ROI” for hver krone skapt.'
           />
         </div>
-      </section> */}
+      </section>
       <section
         ref={forretningsModellRef}
-        className='w-full md:w-2/3 py-20 md:py-28 '
+        className='w-full md:w-2/3 py-20 md:py-28 px-2'
       >
-        <Heading2 text='Forretningsmodell' />
-        <Paragraph text='Ingen er perfekte og ting tar tid. Samtidig, har vi troen på at åpenhet skaper de beste forutsetningen for forbedringer og tilrettelegger for bærekraftig samarbeid både eksternt og internt. ' />
-        <Paragraph text='Her ser dere en ganske nøyaktig oversikt over hvordan midler forvaltes i forbindelse med “Limited edition - Vinter kolleksjon”.' />
-        <Paragraph text='Vi er kanskje litt radikale og har ingen tradisjonelle lønnskostnader i selskapet. Dette innebærer ofte høy risiko under en oppstart, og sammen med aktive bidragsytere, har vi en “penger inn, penger ut” model for å kunne bygge selskapet sten for sten. ' />
+        <Heading2 className='uppercase mb-6' text='Forretningsmodell' />
+        <Paragraph
+          className='mb-6'
+          text='Ingen er perfekte og ting tar tid. Samtidig, har vi troen på at åpenhet skaper de beste forutsetningen for forbedringer og tilrettelegger for bærekraftig samarbeid både eksternt og internt. '
+        />
+        <Paragraph
+          className='mb-6'
+          text='Her ser dere en ganske nøyaktig oversikt over hvordan midler forvaltes i forbindelse med “Limited edition - Vinter kolleksjon”.'
+        />
+        <Paragraph
+          className='mb-6'
+          text='Vi er kanskje litt radikale og har ingen tradisjonelle lønnskostnader i selskapet. Dette innebærer ofte høy risiko under en oppstart, og sammen med aktive bidragsytere, har vi en “penger inn, penger ut” model for å kunne bygge selskapet sten for sten. '
+        />
         <ParagraphBold
           className='uppercase'
           text='Inntekter ved 90% utsolgt kolleksjon'
         />
-        <Paragraph className='text-impact-green' text='Ca 460 000 NOK' />
+        <Paragraph className='text-impact-green mb-6' text='Ca 460 000 NOK' />
         <ParagraphBold className='uppercase' text='Leverandør' />
-        <Paragraph className='text-impact-green' text='Ca 140 000 NOK' />
+        <Paragraph className='text-impact-green mb-6' text='Ca 140 000 NOK' />
         <ParagraphBold className='uppercase' text='Kickback bidragsytere' />
-        <Paragraph className='text-impact-green' text='Ca 90 000 NOK' />
+        <Paragraph className='text-impact-green mb-6' text='Ca 90 000 NOK' />
         <ParagraphBold
           className='uppercase'
           text='51% overskudd uavkortet til stiftelse'
         />
-        <Paragraph className='text-impact-green' text='Ca 60 000 NOK' />
+        <Paragraph className='text-impact-green mb-6' text='Ca 60 000 NOK' />
         <ParagraphBold
           className='uppercase'
           text='49% overskudd - drift og videreutvikling'
         />
-        <Paragraph className='text-impact-green' text='Ca 60 000 NOK' />
-        <Heading3 className='uppercase' text='Stiftelsen' />
+        <Paragraph className='text-impact-green mb-6' text='Ca 60 000 NOK' />
+      </section>
+      <section className='w-full md:w-2/3 py-20 md:py-28 px-2'>
+        <Heading3 className='uppercase mb-6' text='Stiftelsen' />
         <ParagraphBold
           className='uppercase'
           text='Innsamlet per - 90% utsolgt kleskolleksjon'
         />
-        <Paragraph className='text-impact-green' text='60 000 NOK' />
+        <Paragraph className='text-impact-green mb-6' text='60 000 NOK' />
         <ParagraphBold
           className='uppercase'
           text='Snitt støtte per - godkjent søknad'
         />
-        <Paragraph className='text-impact-green' text='5000 NOK' />
+        <Paragraph className='text-impact-green mb-6' text='5000 NOK' />
         <ParagraphBold
           className='uppercase'
           text='Personer støttet - per kleskolleksjon'
         />
-        <Paragraph className='text-impact-green' text='10 personer' />
+        <Paragraph className='text-impact-green mb-6' text='10 personer' />
         <ParagraphBold
           className='uppercase'
           text='Positive samfunnsmessige ringevirkninger?'
         />
         <Paragraph
-          className='text-impact-green'
+          className='text-impact-green mb-6'
           text='Håper på samarbeid med forskningsrådet'
         />
         <ParagraphBold className='uppercase' text='Driftskostnad år 1' />
-        <Paragraph className='text-impact-green' text='15 000 NOK' />
+        <Paragraph className='text-impact-green mb-6' text='15 000 NOK' />
         <ParagraphBold className='uppercase' text='Admin og lønnskostnader' />
-        <Paragraph className='text-impact-green' text='0 NOK' />
+        <Paragraph className='text-impact-green mb-6' text='0 NOK' />
         <ParagraphBold className='uppercase' text='Styrehonorarer' />
-        <Paragraph className='text-impact-green' text='0 NOK' />
+        <Paragraph className='text-impact-green mb-6' text='0 NOK' />
       </section>
-      <section ref={teamRef} className='w-full md:w-2/3 py-20 md:py-28 '>
-        <Heading2 text='Team' />
+      <section ref={teamRef} className='w-full md:w-2/3 py-20 md:py-28 px-2'>
+        <Heading2 className='mb-6' text='Team' />
         <div className='grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 '>
           {images.map((image) => (
             <div key={image.src}>
@@ -184,18 +207,22 @@ const VartArbeid = () => {
           ))}
         </div>
       </section>
-      <section ref={faqRef} className='w-full md:w-2/3 py-20 md:py-28 '>
+      <section
+        ref={faqRef}
+        className='px-2 md:px-10 w-full md:w-2/3 py-20 md:py-28 '
+      >
         <div>
+          <Heading2 className='uppercase mb-4 pl-2' text='Faq' />
           <Accordion className='border-0'>
             {faqs.map((faq) => {
               return (
                 <AccordionItem
-                  className='mb-8 border-b border-impact-black'
+                  className='border-b border-impact-green mb-0 py-4'
                   key={faq.q}
                 >
                   <AccordionItemHeading>
-                    <AccordionItemButton>
-                      <Paragraph className='inline' text={faq.q} />
+                    <AccordionItemButton className='bg-transparent mb-0'>
+                      <Paragraph className='inline mb-0 pl-2' text={faq.q} />
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>

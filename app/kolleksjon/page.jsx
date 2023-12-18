@@ -36,8 +36,8 @@ const Kolleksjon = () => {
         <div>
           <Heading2 className='uppercase' text='T-shirt' />
         </div>
-        <div className='flex flex-col md:flex-row w-full justify-between'>
-          <div className='w-full min-h-[300px] md:w-1/4 relative'>
+        <div className='flex flex-col md:flex-row w-full justify-between md:items-start items-center'>
+          <div className='w-full min-h-[300px] md:w-1/4 relative mb-2 md:mb-0'>
             <Image
               alt='Tee shirts logo'
               fill
@@ -46,7 +46,7 @@ const Kolleksjon = () => {
               src='/imgs/model_back_tee_white.png'
             />
           </div>
-          <div className='w-full min-h-[300px] md:w-1/4 relative'>
+          <div className='w-full min-h-[300px] md:w-1/4 relative mb-2 md:mb-0'>
             <Image
               alt='Tee shirts logo'
               fill

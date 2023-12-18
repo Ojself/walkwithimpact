@@ -6,18 +6,18 @@ import Heading3 from "../layout/typography/Heading3";
 
 const ProductInformation = ({
   title,
-  type,
-  origin,
-  producer,
-  material,
-  energyConsumption,
-  blackChainTimeStamp,
+  type = "",
+  origin = "",
+  producer = "",
+  material = "",
+  energyConsumption = "",
+  blackChainTimeStamp = "",
   sizes,
   price,
 }) => {
   const [selectedSize, setSelectedSize] = useState(null);
   return (
-    <div className='w-full md:w-1/4 flex flex-col justify-between'>
+    <div className='w-full sm:w-1/3 md:w-1/4 flex flex-col justify-between'>
       <Heading2 className='uppercase mb-6' text={title} />
       <Paragraph className='mb-1' text={`Produkt type: ${type}`} />
       <Paragraph className='mb-1' text={`Opprinnelsessted: ${origin}`} />
@@ -51,7 +51,7 @@ const ProductInformation = ({
         })}
       </div>
       <Heading3 className='my-2' text={`Pris: ${price} NOK`} />
-      <button className='border-impact-green border-2 w-80 rounded-sm gap-2 py-2'>
+      <button className='border-impact-green border-2 w-full rounded-sm gap-2 py-2'>
         Send bestilling
       </button>
     </div>

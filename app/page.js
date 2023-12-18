@@ -36,7 +36,7 @@ export default function Home() {
         </div>
       </SectionDefaultLayout>
       <Gallery />
-      <SectionDefaultLayout className='bg-blob-green-light h-screen  flex items-center justify-center'>
+      <SectionDefaultLayout className='bg-blob-green-light2 h-screen  flex items-center justify-center'>
         <div className='flex justify-between w-full md:w-2/3 lg:w-1/2'>
           <div className='w-full md:w-2/5'>
             <p className='mb-12'>
