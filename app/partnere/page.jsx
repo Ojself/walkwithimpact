@@ -24,7 +24,7 @@ const Page = () => {
                 className='mb-6'
                 text='UNISOT is a Software-as-a-Service (SaaS) providing solutions that can be used to track products from the first raw product producers – to logistics, production, distribution and all the way to the end consumer – preventing waste and unethical practices.'
               />
-              <Link href='https://www.google.com'>
+              <Link rel='noopener noreferrer' href='https://unisot.com/'>
                 <button className='border-impact-green border-2 w-80 rounded-sm gap-2 py-2'>
                   Besøk nettside
                 </button>
@@ -38,7 +38,7 @@ const Page = () => {
                 className='mb-6'
                 text='At Nordic Textile, we weave transparency and trust into every stitch, ensuring high-quality garments with ethical values. We are here to foster sustainability, ethics, and a more harmonious balance between profitability and environmental impact. Our commitment to integrity and sustainability empowers conscious consumers in a fashion-forward future.'
               />
-              <Link href='https://www.google.com'>
+              <Link rel='noopener noreferrer' href='https://nordictextile.no/'>
                 <button className='border-impact-green border-2 w-80 rounded-sm gap-2 py-2'>
                   Besøk nettside
                 </button>
@@ -60,7 +60,10 @@ const Page = () => {
                 className='mb-6'
                 text='Thianis Apparels Ltd: World-class manufacturer of high-quality Mens and Ladies Wear in Asia. Committed to professionalism, perfection, and sustainability. Specializing in niche product lines for schools, workwear, airlines, hotels, and more. Experienced, diverse team and skilled workforce ensure excellent products.'
               />
-              <Link href='https://www.google.com'>
+              <Link
+                rel='noopener noreferrer'
+                href='https://thianisapparelsltd.com/'
+              >
                 <button className='border-impact-green border-2 w-80 rounded-sm gap-2 py-2'>
                   Besøk nettside
                 </button>
