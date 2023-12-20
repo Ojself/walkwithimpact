@@ -98,7 +98,7 @@ const VartArbeid = () => {
       <section ref={visjonRef} className='w-full md:w-2/3 py-20 md:py-28 px-2'>
         <Heading1 className='uppercase text-center mt-10' text='Vårt arbeid' />
       </section>
-      <section className='bg-blob-green-light min-h-screen w-full md:w-2/3 flex items-center justify-center px-2'>
+      <section className='bg-blob-green-light before:h-[100%] before:w-[190%] md:before:w-[130%] lg:before:w-[90%] min-h-screen w-full md:w-2/3 flex items-center justify-center px-2'>
         <div className='flex flex-col w w-4/5 md:w-2/3 lg:w-1/2'>
           <Heading2 className='uppercase mb-3' text='Vår visjon' />
           <Paragraph

@@ -36,23 +36,23 @@ const Kolleksjon = () => {
         <div>
           <Heading2 className='uppercase' text='T-shirt' />
         </div>
-        <div className='flex flex-col md:flex-row w-full justify-between md:items-start items-center'>
-          <div className='w-full min-h-[300px] md:w-1/4 relative mb-2 md:mb-0'>
+        <div className='flex flex-col md:flex-row w-full justify-between md:items-start items-center h-[574px]'>
+          <div className='h-full md:w-1/4 relative mb-2 md:mb-0'>
             <Image
-              alt='Tee shirts logo'
+              alt='Tee shirt'
               fill
+              className='object-top h-[500px]'
               objectFit='contain'
-              className='object-center md:object-left-top'
-              src='/imgs/model_back_tee_white.png'
+              src='/imgs/model_back_left_tee.png'
             />
           </div>
-          <div className='w-full min-h-[300px] md:w-1/4 relative mb-2 md:mb-0'>
+          <div className='h-full md:w-1/4 relative mb-2 md:mb-0'>
             <Image
-              alt='Tee shirts logo'
+              alt='Tee shirt'
               fill
+              className='object-top h-[500px]'
               objectFit='contain'
-              className='object-center md:object-left-top'
-              src='/imgs/model_back_tee_white.png'
+              src='/imgs/model_back_right_tee.png'
             />
           </div>
           <ProductInformation
@@ -66,11 +66,11 @@ const Kolleksjon = () => {
         <div className='flex flex-col md:flex-row w-full justify-between'>
           <div className='w-full min-h-[300px] md:w-1/4 relative'>
             <Image
-              alt='Tee shirts logo'
+              alt='Tee shirt'
               fill
               objectFit='contain'
               className='object-center md:object-left-top'
-              src='/imgs/model_back_tee_white.png'
+              src='/imgs/model_back_right_tee_green.png'
             />
           </div>
           <ProductInformation
@@ -83,22 +83,22 @@ const Kolleksjon = () => {
 
       <SectionDefaultLayout>
         <div className='flex flex-col md:flex-row w-full justify-between'>
-          <div className='w-full min-h-[300px] md:w-1/4 relative'>
+          <div className='h-full md:w-1/4 relative mb-2 md:mb-0'>
             <Image
-              alt='Tee shirts logo'
+              alt='Tee shirt'
               fill
+              className='object-top h-[500px]'
               objectFit='contain'
-              className='object-center md:object-left-top'
-              src='/imgs/model_back_tee_white.png'
+              src='/imgs/model_back_left_tee.png'
             />
           </div>
-          <div className='w-full min-h-[300px] md:w-1/4 relative'>
+          <div className='h-full md:w-1/4 relative mb-2 md:mb-0'>
             <Image
-              alt='Tee shirts logo'
+              alt='Tee shirt'
               fill
+              className='object-top h-[500px]'
               objectFit='contain'
-              className='object-center md:object-left-top'
-              src='/imgs/model_back_tee_white.png'
+              src='/imgs/model_back_right_tee.png'
             />
           </div>
           <ProductInformation
