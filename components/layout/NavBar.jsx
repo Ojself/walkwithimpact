@@ -5,14 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
-const navs = ["stiftelsen", "kolleksjon", "vårt arbeid", "partnere"];
+const navs = [/* "stiftelsen", */ "kolleksjon", "vårt arbeid", "partnere"];
 
 const NavBar = () => {
   const pathname = usePathname();
 
   return (
     <nav className='flex p-8'>
-      <div className='flex h-[70px] w-[170px]'>
+      <div className='flex h-[70px] w-[170px] '>
         <Link className='w-full flex ' href='/'>
           <div className='w-1/2 relative'>
             <Image
@@ -32,7 +32,7 @@ const NavBar = () => {
           </div>
         </Link>
       </div>
-      <div className='w-full justify-around flex items-center'>
+      <div className='w-1/2 justify-between flex items-center m-auto'>
         {navs.map((nav) => {
           // should remove æ ø å
 

@@ -2,42 +2,69 @@ import Gallery from "@/components/home/Gallery";
 import SectionDefaultLayout from "@/components/layout/SectionDefaultLayout";
 import Heading1 from "@/components/layout/typography/Heading1";
 import Heading3 from "@/components/layout/typography/Heading3";
+import Heading4 from "@/components/layout/typography/Heading4";
 import Paragraph from "@/components/layout/typography/Paragraph";
 import Image from "next/image";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 export default function Home() {
   return (
     <main className='flex flex-col'>
       <SectionDefaultLayout>
-        <div>
-          <div>
-            <Image
-              width={961}
-              height={641}
-              src='/imgs/models_tee.png'
-              alt='Models with white tee shirts'
+        <div className='w-full'>
+          <div className='flex flex-col text-center'>
+            <Heading1 className='uppercase' text='Walk with impact' />
+            <Paragraph
+              className='text-sm sm:text-lg md:text-xl lg:text-2xl mt-4'
+              text='Streetwear med en intensjon'
             />
           </div>
-
-          <div className='flex flex-col'>
-            <Heading1
-              className='uppercase mt-4'
-              text='Walk with impact - vinter kolleksjon'
-            />
-            <div className='flex justify-end'>
-              <Paragraph text='Streetwear -' />
-              <Paragraph
-                className='ml-1'
-                italic={true}
-                text='med en intensjon'
+          <div className='flex text-center justify-between mt-20'>
+            <div className='w-1/4 '>
+              <div className='relative w-full h-16 md:h-20'>
+                <Image
+                  alt=''
+                  src='/imgs/plant_icon.png'
+                  fill
+                  objectFit='contain'
+                />
+              </div>
+              <Heading4 className='uppercase mt-8' text='Etisk produsert' />
+            </div>
+            <div className='w-1/4'>
+              <div className='relative w-full h-16 md:h-20'>
+                <Image
+                  alt=''
+                  fill
+                  objectFit='contain'
+                  src='/imgs/heart_icon.png'
+                />
+              </div>
+              <Heading4
+                className='uppercase mt-8'
+                text='Overskudd til veldedighet'
               />
             </div>
+            <div className='w-1/4'>
+              <div className='relative w-full h-16 md:h-20'>
+                <Image
+                  alt=''
+                  fill
+                  objectFit='contain'
+                  src='/imgs/humans_icon.png'
+                />
+              </div>
+              <Heading4 className='uppercase mt-8' text='Inspirere' />
+            </div>
+          </div>
+          <div className='flex justify-center mt-20'>
+            <MdKeyboardArrowDown className='text-5xl' />
           </div>
         </div>
       </SectionDefaultLayout>
       <Gallery />
-      <SectionDefaultLayout className='bg-blob-green-light2 h-screen  flex items-center justify-center'>
-        <div className='flex justify-between w-full md:w-2/3 lg:w-1/2'>
+      <SectionDefaultLayout className='h-screen  flex items-center justify-center'>
+        <div className='w-full flex justify-between mb-20'>
           <div className='w-full md:w-2/5'>
             <p className='mb-12'>
               WalkWithImpact er et norskt streetware brand - som tilrettelegger

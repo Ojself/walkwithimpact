@@ -38,16 +38,12 @@ const Gallery = () => {
                   src={image.original}
                   className='object-center object-cover '
                 />
-                <button className='absolute bottom-0 w-full bg-[#C4C4C4] h-14 '>
+                <button className='absolute bottom-0 w-full bg-impact-green text-white h-14 '>
                   SE MER
                 </button>
               </div>
             );
           })}
-        </div>
-        <div className='uppercase flex mt-20'>
-          <Heading3 text='Kunst: Jenny Hviding' />
-          <Heading3 className='ml-4' text='Tekst: Pia Von Hirsch' />
         </div>
       </div>
     </SectionDefaultLayout>

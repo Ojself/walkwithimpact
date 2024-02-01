@@ -20,55 +20,90 @@ import Heading1 from "@/components/layout/typography/Heading1";
 
 const faqs = [
   {
-    q: "HVORFOR ER IKKE STIFTELSEN ETABLERT?",
-    a: "any answer",
-  },
-  {
-    q: "HVORDAN VIL OVERSKUDDET FORVALTES?",
-    a: "any answer",
-  },
-  {
-    q: "NÅR VIL DERE STARTE ARBEIDET I STIFTELSEN?",
-    a: "any answer",
-  },
-  {
-    q: "VIL DERE MÅLE DEN FAKTISKE EFFEKTEN AV ARBEIDET I STIFTELSEN?",
-    a: "any answer",
-  },
-  {
-    q: "HVORDAN VIL DERE JOBBE FOR Å REDUSERE KLASSISK OVERHEAD?",
-    a: "any answer",
-  },
-  {
-    q: "JEG KJENNER NOEN SOM KUNNE HATT BEHOV FOR DENNE TJENESTEN. HVA GJØR JEG?",
-    a: "any answer",
-  },
-  {
-    q: "JEG REPRESENTERER EN IDEEL ORGANISASJON OG ØNSKER SAMARBEID",
-    a: "any answer",
-  },
-  {
-    q: "JEG HAR LYST TIL Å BIDRA PÅ KORT ELLER LANG SIKT",
-    a: "any answer",
-  },
-  {
-    q: "JEG TRENGER IKKE FLERE KLÆR, MEN ØNSKER Å STØTTE ØKONOMISK",
+    q: "JEG REPRESENTERER EN IDEELL ORGANISASJON OG ØNSKER SAMARBEID?",
     a: "any answer",
   },
   {
     q: "NÅR VIL DET KOMME ANDRE IDEELLE FORMÅL MAN KAN STØTTE?",
     a: "any answer",
   },
+  {
+    q: "HVORDAN VELGER DERE UT IDEELLE ORGANISASJONER?",
+    a: "any answer",
+  },
+  {
+    q: "HVORDAN SIKRER DERE AT OVERSKUDDET/STØTTEN FORVALTES EFFEKTIVT?",
+    a: "any answer",
+  },
+  {
+    q: "HVORFOR HAR DERE OGSÅ EN EGEN STIFTELSE?",
+    a: "any answer",
+  },
+  {
+    q: "JEG ER SKRIBENT, GRAFISK DESIGNER ELLER ILLUSTRATØR OG ØNSKER SAMARBEID?",
+    a: "any answer",
+  },
+  {
+    q: "ER WALKWITHIMPACT EN IDEELL ORGANISASJON?",
+    a: "any answer",
+  },
+  {
+    q: "HVORDAN FÅR DERE DETTE TIL Å FUNGERER ØKONOMISK?",
+    a: "any answer",
+  },
+  {
+    q: "KAN JEG DONERE PENGER DIREKTE TIL WALKWITHIMPACT?",
+    a: "any answer",
+  },
+  {
+    q: "ER DET MULIG Å BIDRA SOM EN DEL AV TEAMET?",
+    a: "any answer",
+  },
 ];
 
 const images = [
-  { src: "/imgs/profile_tormod.png", alt: "/profile picture Tormod" },
-  { src: "/imgs/profile_tormod.png", alt: "/profile picture Tormod" },
-  { src: "/imgs/profile_tormod.png", alt: "/profile picture Tormod" },
-  { src: "/imgs/profile_tormod.png", alt: "/profile picture Tormod" },
-  { src: "/imgs/profile_tormod.png", alt: "/profile picture Tormod" },
-  { src: "/imgs/profile_tormod.png", alt: "/profile picture Tormod" },
-  { src: "/imgs/profile_tormod.png", alt: "/profile picture Tormod" },
+  {
+    src: "/imgs/profile_tormod.png",
+    alt: "/profile picture Tormod",
+    name: "Hilde Vanvik",
+    title: "Communication",
+  },
+  {
+    src: "/imgs/profile_tormod.png",
+    alt: "/profile picture Tormod",
+    name: "Pia Von Hirsch",
+    title: "Social media",
+  },
+  {
+    src: "/imgs/profile_tormod.png",
+    alt: "/profile picture Tormod",
+    name: "Lynette Aglen",
+    title: "Desinger",
+  },
+  {
+    src: "/imgs/profile_tormod.png",
+    alt: "/profile picture Tormod",
+    name: "Line Stolen Wilberg",
+    title: "Operations",
+  },
+  {
+    src: "/imgs/profile_tormod.png",
+    alt: "/profile picture Tormod",
+    name: "Jonathan Pirolt",
+    title: "Graphic design",
+  },
+  {
+    src: "/imgs/profile_tormod.png",
+    alt: "/profile picture Tormod",
+    name: "Ken Oishi",
+    title: "Finance",
+  },
+  {
+    src: "/imgs/profile_tormod.png",
+    alt: "/profile picture Tormod",
+    name: "Joakim Brur Engen Johannessen",
+    title: "Founder, CEO",
+  },
 ];
 
 const VartArbeid = () => {
@@ -191,20 +226,23 @@ const VartArbeid = () => {
       <section ref={teamRef} className='w-full md:w-2/3 py-20 md:py-28 px-2'>
         <Heading2 className='mb-6' text='Team' />
         <div className='grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 '>
-          {images.map((image) => (
-            <div key={image.src}>
-              <div className='relative overflow-hidden aspect-ratio-square pb-80 '>
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className='inset-0 object-contain object-left'
-                />
+          {images.map((image) => {
+            const { src, alt, name, title } = image;
+            return (
+              <div key={src}>
+                <div className='relative overflow-hidden aspect-ratio-square pb-80 '>
+                  <Image
+                    src={src}
+                    alt={alt}
+                    fill
+                    className='inset-0 object-contain object-left'
+                  />
+                </div>
+                <Heading5 text={name} />
+                <ParagraphBold text={title} />
               </div>
-              <Heading5 className='uppercase' text='Tormod' />
-              <ParagraphBold text='Technical lead' />
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
       <section
