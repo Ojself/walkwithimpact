@@ -224,7 +224,13 @@ const VartArbeid = () => {
         <Paragraph className='text-impact-green mb-6' text='0 NOK' />
       </section>
       <section ref={teamRef} className='w-full md:w-2/3 py-20 md:py-28 px-2'>
-        <Heading2 className='mb-6' text='Team' />
+        <Heading2 className='mb-6' text='WALKWITHIMPACT TEAM' />
+        <Paragraph
+          className='mb-6'
+          text='En litta gjeng som synes det er hyggelig å bruke litt av tiden sin på å bidra til gode saker. Alle har dette som en aktiv hobby i dag, og håper det over tid kan utvikle seg til å bli mer aktivt. Ting tar tid, og vi har det gøy på reisen!'
+        />
+        <Paragraph className='mb-6' text='Lyst til å hjelpe til?' />
+
         <div className='grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-4 '>
           {images.map((image) => {
             const { src, alt, name, title } = image;

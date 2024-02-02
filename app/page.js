@@ -3,6 +3,7 @@ import SectionDefaultLayout from "@/components/layout/SectionDefaultLayout";
 import Heading1 from "@/components/layout/typography/Heading1";
 import Heading3 from "@/components/layout/typography/Heading3";
 import Heading4 from "@/components/layout/typography/Heading4";
+import Ingress from "@/components/layout/typography/Ingress";
 import Paragraph from "@/components/layout/typography/Paragraph";
 import Image from "next/image";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -63,28 +64,36 @@ export default function Home() {
         </div>
       </SectionDefaultLayout>
       <Gallery />
-      <SectionDefaultLayout className='h-screen  flex items-center justify-center'>
-        <div className='w-full flex justify-between mb-20'>
+      <SectionDefaultLayout className='h-screen bg-impact-green flex items-center justify-center'>
+        <div className='w-full flex justify-between mb-20 text-impact-white'>
           <div className='w-full md:w-2/5'>
-            <p className='mb-12'>
-              WalkWithImpact er et norskt streetware brand - som tilrettelegger
+            <Ingress
+              className='mb-12'
+              text='WalkWithImpact er et norskt streetware brand - som tilrettelegger
               for at enkeltpersoner og bedrifter kan spre subtil bevissthet, og
-              samtidig bidra med finansiell støtte, til ideelle formål med fokus
-              på FNs bærekraftsmål.
-            </p>
-            <p className='mb-6'>
-              51% av selskapets overskudd går uavkortet til WalkWithImpact
-              stiftelsen. Les mer HER
-            </p>
-            <p className='mb-6'>
-              Om kort tid, vil plattformen tilrettelegge for at flere ideelle
+              samtidig bidra med finansiell støtte, til ideelle formål som
+              jobber for en bedre verden.'
+            />
+
+            <Paragraph
+              className='mb-6'
+              text='51% av selskapets overskudd går uavkortet til WalkWithImpact
+              stiftelsen. Les mer HER'
+            />
+
+            <Paragraph
+              className='mb-6'
+              text='Om kort tid, vil plattformen tilrettelegge for at flere ideelle
               grassroot organisasjoner kan skape sin egen inntektskilde - utover
               tradisjonelle donasjoner, på en etisk, bærekraftig og
-              kostnadseffektiv måte
-            </p>
+              kostnadseffektiv måte'
+            />
 
-            <p className='mb-6'>Kombiner hverdags komfor med en god sak?</p>
-            <button className='border-impact-green border-2 w-80 rounded-sm gap-2 py-2'>
+            <Paragraph
+              className='mb-6'
+              text='Kombiner hverdags komfor med en god sak?'
+            />
+            <button className='border-impact-white border-2 w-80 rounded-sm gap-2 py-2'>
               Se kolleksjon
             </button>
           </div>
