@@ -50,7 +50,7 @@ const NavBar = () => {
               className={`
                 ${
                   isActive ? "underline" : ""
-                } " underline-offset-8 uppercase text-xs sm:text-sm md:text-base "
+                } " underline-offset-8 uppercase text-xs sm:text-sm md:text-base hover:underline cursor-pointer"
               `}
             >
               {nav}
