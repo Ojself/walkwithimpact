@@ -64,9 +64,10 @@ export default function Home() {
         </div>
       </SectionDefaultLayout>
       <Gallery />
-      <SectionDefaultLayout className='h-screen bg-impact-green flex items-center justify-center'>
-        <div className='w-full flex justify-between mb-20 text-impact-white'>
-          <div className='w-full md:w-2/5'>
+
+      <SectionDefaultLayout className='min-h-screen bg-impact-green flex items-center justify-center '>
+        <div className='w-full flex flex-col md:flex-row justify-between mb-20 text-impact-white'>
+          <div className='w-full md:w-2/5 mb-14 md:mb-0'>
             <Ingress
               className='mb-12'
               text='WalkWithImpact er et norskt streetware brand - som tilrettelegger
@@ -93,7 +94,7 @@ export default function Home() {
               className='mb-6'
               text='Kombiner hverdags komfor med en god sak?'
             />
-            <button className='border-impact-white border-2 w-80 rounded-sm gap-2 py-2'>
+            <button className='border-impact-white border-2 w-full max-w-xs  rounded-sm gap-2 py-3'>
               Se kolleksjon
             </button>
           </div>

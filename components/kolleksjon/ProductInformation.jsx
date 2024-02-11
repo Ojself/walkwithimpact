@@ -4,33 +4,78 @@ import Heading2 from "../layout/typography/Heading2";
 import Paragraph from "../layout/typography/Paragraph";
 import Heading3 from "../layout/typography/Heading3";
 
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemButton,
+  AccordionItemHeading,
+  AccordionItemPanel,
+} from "react-accessible-accordion";
+import ParagraphBold from "../layout/typography/ParagraphBold";
+import { MdKeyboardArrowDown } from "react-icons/md";
+
 const ProductInformation = ({
   title,
+  organisation = "",
+  profitReceiver = "",
+  author = "",
+  illustrator = "",
+  sizes,
+  price,
+
   type = "",
   origin = "",
   producer = "",
   material = "",
   energyConsumption = "",
   blackChainTimeStamp = "",
-  sizes,
-  price,
 }) => {
   const [selectedSize, setSelectedSize] = useState(null);
   return (
     <div className='w-full sm:w-1/3 md:w-1/4 flex flex-col justify-between'>
       <Heading2 className='uppercase mb-6' text={title} />
-      <Paragraph className='mb-1' text={`Produkt type: ${type}`} />
-      <Paragraph className='mb-1' text={`Opprinnelsessted: ${origin}`} />
-      <Paragraph className='mb-1' text={`Produsent: ${producer}`} />
-      <Paragraph className='mb-1' text={`Stoffsammensetning: ${material}`} />
+
       <Paragraph
         className='mb-1'
-        text={`Energiforbruk: ${energyConsumption}`}
+        text={`Hva går overskuddet til: ${profitReceiver}`}
       />
+      <Paragraph className='mb-1' text={`Skribent: ${author}`} />
+      <Paragraph className='mb-1' text={`Illustratør: ${illustrator}`} />
+      <Accordion className='border-0'>
+        <AccordionItem className='border-b border-t my-2 border-impact-green'>
+          <AccordionItemHeading>
+            <AccordionItemButton className='bg-transparent mb-0'>
+              <ParagraphBold
+                className='inline mb-0 '
+                text={"Produkt info"}
+                iconRight={<MdKeyboardArrowDown className='text-xl inline' />}
+              />
+            </AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionItemPanel>
+            <Paragraph className='mb-1' text={`Produkt type: ${type}`} />
+            <Paragraph className='mb-1' text={`Opprinnelsessted: ${origin}`} />
+            <Paragraph className='mb-1' text={`Produsent: ${producer}`} />
+            <Paragraph
+              className='mb-1'
+              text={`Stoffsammensetning: ${material}`}
+            />
+            <Paragraph
+              className='mb-1'
+              text={`Energiforbruk: ${energyConsumption}`}
+            />
+            <Paragraph
+              className='mb-1'
+              text={`Blackchain tidsstempel: ${blackChainTimeStamp}`}
+            />
+          </AccordionItemPanel>
+        </AccordionItem>
+      </Accordion>
       <Paragraph
         className='mb-1'
-        text={`Blackchain tidsstempel: ${blackChainTimeStamp}`}
+        text={`Ideel organisasjon: ${organisation}`}
       />
+
       <div className='flex w-full justify-between'>
         {sizes.map((size) => {
           const isSelected = selectedSize === size;

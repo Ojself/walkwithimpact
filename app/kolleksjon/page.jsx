@@ -56,8 +56,10 @@ const Kolleksjon = () => {
             />
           </div>
           <ProductInformation
+            author='PIA VON HIRSCH'
+            illustrator='JENNY HVIDING'
             title={"Møt oss selv"}
-            price={900}
+            price={990}
             sizes={["s", "m", "l", "xl"]}
           />
         </div>
@@ -74,8 +76,10 @@ const Kolleksjon = () => {
             />
           </div>
           <ProductInformation
+            author='PIA VON HIRSCH'
+            illustrator='JENNY HVIDING'
             title={"Nye stier"}
-            price={900}
+            price={990}
             sizes={["s", "m", "l", "xl"]}
           />
         </div>
@@ -102,8 +106,10 @@ const Kolleksjon = () => {
             />
           </div>
           <ProductInformation
+            author='PIA VON HIRSCH'
+            illustrator='JENNY HVIDING'
             title={"Innsiden"}
-            price={900}
+            price={990}
             sizes={["s", "m", "l", "xl"]}
           />
         </div>

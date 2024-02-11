@@ -19,7 +19,7 @@ const Footer = () => {
         />
         <div className='flex'>
           <Paragraph text='Streetwear -' />
-          <Paragraph className='ml-1' italic={true} text='med en intensjon' />
+          <Paragraph className='ml-1' text='med en intensjon' />
         </div>
       </div>
       <div className='flex flex-col lg:flex-row justify-between h-1/2'>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const ParagraphBold = ({ text, className, italic }) => {
+const ParagraphBold = ({ text, className, italic, iconRight }) => {
   return (
     <p
       className={`${className} text-lg font-m-semiBold${
@@ -8,6 +8,7 @@ const ParagraphBold = ({ text, className, italic }) => {
       }`}
     >
       {text}
+      {iconRight && iconRight}
     </p>
   );
 };
