@@ -34,7 +34,10 @@ const ProductInformation = ({
   return (
     <div className='w-full sm:w-1/3 md:w-1/4 flex flex-col justify-between'>
       <Heading2 className='uppercase mb-6' text={title} />
-
+      <Paragraph
+        className='mb-1'
+        text={`Ideel organisasjon: ${organisation}`}
+      />
       <Paragraph
         className='mb-1'
         text={`Hva går overskuddet til: ${profitReceiver}`}
@@ -71,10 +74,6 @@ const ProductInformation = ({
           </AccordionItemPanel>
         </AccordionItem>
       </Accordion>
-      <Paragraph
-        className='mb-1'
-        text={`Ideel organisasjon: ${organisation}`}
-      />
 
       <div className='flex w-full justify-between'>
         {sizes.map((size) => {

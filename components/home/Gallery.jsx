@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Heading2 from "../layout/typography/Heading2";
-import Heading3 from "../layout/typography/Heading3";
 import Image from "next/image";
 import SectionDefaultLayout from "../layout/SectionDefaultLayout";
 
@@ -25,11 +24,11 @@ const Gallery = () => {
           className='uppercase text-center'
           text='Komfortabelt, trendy & etisk'
         />
-        <div className='flex md:flex-row flex-col items-center justify-between mt-20'>
+        <div className='flex lg:flex-row flex-col items-center justify-between mt-20'>
           {images.map((image) => {
             return (
               <div
-                className='relative flex justify-center w-[331px] h-[574px] mb-10 md:mb-0'
+                className='relative flex justify-center w-[331px] h-[574px] mb-10 lg:mb-0'
                 key={image.original}
               >
                 <Image
